@@ -1,0 +1,24 @@
+input {
+  width: 200px;
+  height: 200px;
+}
+
+.textAreaContainer {
+  text-align: center;
+}
+
+.form-floating {
+  display: flex;
+  place-content: center;
+}
+
+textarea {
+  height: 200px!important;
+  width: 70%;
+  padding-top: 10px!important;
+  margin-bottom: 10px;
+}
+
+#floatingTextarea2 {
+  cursor:default;
+}
