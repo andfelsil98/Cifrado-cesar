@@ -4,12 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { CifradoComponent } from './components/cifrado/cifrado.component';
+
+import { DecodificarComponent } from './components/decodificar/decodificar.component';
+import { CodificarComponent } from './components/codificar/codificar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CifradoComponent
+    DecodificarComponent,
+    CodificarComponent
   ],
   imports: [
     BrowserModule,

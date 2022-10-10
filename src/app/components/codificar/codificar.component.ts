@@ -1,16 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgModule } from "@angular/core";
-import { ThisReceiver } from '@angular/compiler';
-
-
 
 @Component({
-  selector: 'app-cifrado',
-  templateUrl: './cifrado.component.html',
-  styleUrls: ['./cifrado.component.css']
+  selector: 'app-codificar',
+  templateUrl: './codificar.component.html',
+  styleUrls: ['./codificar.component.css']
 })
-export class CifradoComponent implements OnInit {
+export class CodificarComponent implements OnInit {
+
   word: String[] = [];
   textField: String = "";
 
@@ -24,6 +20,11 @@ export class CifradoComponent implements OnInit {
   findWord() {
     this.word = this.textField.split("");
     console.log(this.textField.split(""));
+  }
+
+  clearWord() {
+    this.word = [];
+    this.textField = '';
   }
 
 }

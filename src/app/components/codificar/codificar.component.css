@@ -1,0 +1,133 @@
+input {
+  width: 200px;
+  height: 200px;
+}
+
+img {
+  width: 100px;
+  margin: 10px 10px;
+}
+
+/* button{
+  margin-right: 10px;
+} */
+
+/* .btn {
+  display: flex;
+  place-content: start;
+}
+.action-btn {
+  height: 200px!important;
+  width: 70%;
+  display: flex;
+  place-content: center;
+} */
+
+/* bloques para escribir texto */
+
+textarea {
+  height: 200px!important;
+  width: 70%;
+  padding-top: 10px!important;
+  margin-bottom: 10px;
+}
+
+.textAreaContainer {
+  text-align: center;
+}
+
+.form-floating {
+  display: flex;
+  place-content: center;
+}
+
+#floatingTextarea2 {
+  cursor:default;
+}
+
+.invalid {
+  background-color: #eeeef0;
+  box-shadow: none;
+  border: none;
+}
+
+
+/* botones de codificar y decodificar */
+/* codificar */
+a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+.css-button-arrow--sky {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #3a86ff
+}
+.css-button-arrow--sky:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left:8px;
+}
+.css-button-arrow--sky:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.css-button-arrow--sky:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+/* decodificar */
+.css-button-arrow--black {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #343a40
+}
+.css-button-arrow--black:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left:8px;
+}
+.css-button-arrow--black:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.css-button-arrow--black:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}

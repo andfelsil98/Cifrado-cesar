@@ -1,0 +1,32 @@
+
+<div class="textAreaContainer font">
+  <img src="../../../assets/img/cifrado-cesar.png" alt="">
+  <h1>CIFRADO CESAR</h1>
+  <a href="" class="css-button-arrow--sky">Codificar</a>
+  <a routerLink="/decodificar" class="css-button-arrow--black">Decodificar</a>
+  <!-- <button type="button" class="css-button-arrow--sky">Codificar</button>
+  <button type="button" class="css-button-arrow--black">Decodificar</button> -->
+    <p><label for="prueba">Introduzca su texto aqui:</label></p>
+  <!-- <textarea name="userInput" [(ngModel)]="textField" id="userInput" cols="60" rows="10"></textarea> -->
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Text here" [(ngModel)]="textField" id="floatingTextarea1"></textarea>
+    <!--<label for="floatingTextarea2">Text</label>-->
+
+  </div>
+  Texto: {{ textField }}
+  <p class="action-btn">
+    <button [disabled]="!textField" type="button" class="btn btn-success" (click)="findWord()">Decodifica tu mensaje</button>
+  </p>
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Text here" [class.invalid]= 'word.length === 0' readonly="readonly" id="floatingTextarea2">{{ word }}</textarea>
+    <!--<label for="floatingTextarea2">Text</label>-->
+          <!-- <p *ngIf="word">
+        Traduccion: {{ word }}
+      </p> -->
+  </div>
+  <p class="action-btn">
+    <button [disabled]="word.length === 0" type="button" class="btn btn-danger" (click)="clearWord()">Limpiar</button>
+  </p>
+
+
+</div>
