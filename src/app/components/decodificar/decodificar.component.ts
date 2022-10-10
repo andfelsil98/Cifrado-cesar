@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+// import { OperacionesService } from 'src/app/services/operaciones.service';
 
 @Component({
   selector: 'app-decodificar',
@@ -9,7 +10,8 @@ import { Location } from '@angular/common';
 export class DecodificarComponent implements OnInit {
 
   constructor(
-    private location: Location
+    private location: Location,
+    // private op: OperacionesService
   ) { }
 
   ngOnInit(): void {
@@ -18,4 +20,8 @@ export class DecodificarComponent implements OnInit {
   goToBack() {
     this.location.back();
   }
+
+  // fulanito() {
+  //   this.op.operacion1
+  // }
 }

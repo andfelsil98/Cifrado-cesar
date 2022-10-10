@@ -2,30 +2,44 @@
 <div class="textAreaContainer font">
   <img src="../../../assets/img/cifrado-cesar.png" alt="">
   <h1>CIFRADO CESAR</h1>
-  <a href="" class="css-button-arrow--sky">Codificar</a>
-  <a routerLink="/decodificar" class="css-button-arrow--black">Decodificar</a>
+
   <!-- <button type="button" class="css-button-arrow--sky">Codificar</button>
   <button type="button" class="css-button-arrow--black">Decodificar</button> -->
-    <p><label for="prueba">Introduzca su texto aqui:</label></p>
+    <h3><label for="prueba">Introduzca su texto aqui:</label></h3>
   <!-- <textarea name="userInput" [(ngModel)]="textField" id="userInput" cols="60" rows="10"></textarea> -->
   <div class="form-floating">
     <textarea class="form-control" placeholder="Text here" [(ngModel)]="textField" id="floatingTextarea1"></textarea>
     <!--<label for="floatingTextarea2">Text</label>-->
 
   </div>
-  Texto: {{ textField }}
-  <p class="action-btn">
-    <button [disabled]="!textField" type="button" class="btn btn-success" (click)="findWord()">Decodifica tu mensaje</button>
+
+  <p>
+    <!-- <a  href="" class="css-button-arrow--sky">Codificar</a>
+  <a routerLink="/decodificar" class="css-button-arrow--black">Decodificar</a> -->
+  <button [disabled]="!textField" class="inactive--sky " [class.css-button-arrow--sky]= 'textField' (click)="divideWord()">Codificar</button>
+  <button [disabled]="dividedWord.length === 0" class="inactive--black" [class.css-button-arrow--black]= 'dividedWord.length > 0' (click)="joinWord()">Decodificar</button>
   </p>
-  <div class="form-floating">
-    <textarea class="form-control" placeholder="Text here" [class.invalid]= 'word.length === 0' readonly="readonly" id="floatingTextarea2">{{ word }}</textarea>
-    <!--<label for="floatingTextarea2">Text</label>-->
-          <!-- <p *ngIf="word">
-        Traduccion: {{ word }}
-      </p> -->
+  <!-- <p class="action-btn">
+    <button [disabled]="!textField" type="button" class="btn btn-success" (click)="findWord()">Decodifica tu mensaje</button>
+  </p> -->
+  <h4  *ngIf="!joinedWord && textField && dividedWord.length != 0">
+    Texto codificado:
+  </h4>
+  <div class="form-floating" *ngIf="!joinedWord">
+    <!-- string interpolation -->
+
+    <textarea class="form-control" placeholder="Text here" [class.invalid]= 'dividedWord.length === 0' readonly="readonly" id="floatingTextarea2">{{ dividedWord }}</textarea>
+  </div>
+  <h4 *ngIf="dividedWord.length === 0 && joinedWord">
+    Texto decodificado:
+  </h4>
+  <div class="form-floating" *ngIf="dividedWord.length === 0 && joinedWord">
+    <!-- string interpolation -->
+
+    <textarea class="form-control" placeholder="Text here" [class.invalid]= '!joinedWord' readonly="readonly" id="floatingTextarea2">{{ joinedWord }}</textarea>
   </div>
   <p class="action-btn">
-    <button [disabled]="word.length === 0" type="button" class="btn btn-danger" (click)="clearWord()">Limpiar</button>
+    <button [disabled]="dividedWord.length === 0 && !joinedWord" type="button" class="inactive--red" [class.css-button-arrow--red]="dividedWord.length > 0 || joinedWord" (click)="clearWord()">Limpiar</button>
   </p>
 
 

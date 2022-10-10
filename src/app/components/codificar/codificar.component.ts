@@ -7,24 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodificarComponent implements OnInit {
 
-  word: String[] = [];
+  dividedWord: String[] = [];
   textField: String = "";
+  joinedWord: String = "";
 
   //textField = new FormControl ("", Validators.required)
 
   constructor() { }
   ngOnInit(): void {
-
   }
 
-  findWord() {
-    this.word = this.textField.split("");
+  divideWord() {
+    this.dividedWord = this.textField.split("");
+    this.joinedWord = '';
     console.log(this.textField.split(""));
   }
 
   clearWord() {
-    this.word = [];
+    this.dividedWord = [];
     this.textField = '';
+    this.joinedWord = '';
+  }
+
+  joinWord() {
+    this.joinedWord = this.dividedWord.toString();
+    this.joinedWord = this.joinedWord.replace(/,/g, "");
+    this.dividedWord = [];
   }
 
 }

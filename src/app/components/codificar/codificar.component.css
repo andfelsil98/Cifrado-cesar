@@ -23,6 +23,11 @@ img {
   place-content: center;
 } */
 
+h4 {
+  margin-left: 300px;
+  text-align:start;
+}
+
 /* bloques para escribir texto */
 
 textarea {
@@ -52,11 +57,75 @@ textarea {
 }
 
 
+
 /* botones de codificar y decodificar */
 /* codificar */
-a {
-  text-decoration: none;
+
+
+
+button {
+  /* text-decoration: none; */
   margin-right: 10px;
+}
+
+.inactive--sky {
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: #7faffb;
+  cursor: not-allowed;
+}
+
+.inactive--black {
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: #7e8b99;
+  cursor: not-allowed;
+}
+
+.inactive--black {
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: #7e8b99;
+  cursor: not-allowed;
+}
+
+.inactive--red {
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: #e36f7d;
+  cursor: not-allowed;
 }
 
 
@@ -76,6 +145,10 @@ a {
   border: none;
   background-color: #3a86ff
 }
+
+
+
+
 .css-button-arrow--sky:hover {
   border-radius: 5px;
   padding-right: 24px;
@@ -122,6 +195,44 @@ a {
   right: 10px;
 }
 .css-button-arrow--black:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+/* limpiar */
+
+.css-button-arrow--red {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #ef233c
+}
+.css-button-arrow--red:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left:8px;
+}
+.css-button-arrow--red:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.css-button-arrow--red:after {
   content: "\00BB";
   position: absolute;
   opacity: 0;
