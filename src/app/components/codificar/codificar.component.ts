@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OperacionesService } from 'src/app/services/operaciones.service';
 
 @Component({
   selector: 'app-codificar',
@@ -7,32 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodificarComponent implements OnInit {
 
-  dividedWord: String[] = [];
   textField: String = "";
-  joinedWord: String = "";
+  cod_result: String= '';
+  decod_result: String= '';
 
-  //textField = new FormControl ("", Validators.required)
-
-  constructor() { }
+  constructor(
+    private operaciones: OperacionesService
+  ) { }
   ngOnInit(): void {
   }
 
-  divideWord() {
-    this.dividedWord = this.textField.split("");
-    this.joinedWord = '';
-    console.log(this.textField.split(""));
+  codificar() {
+    this.cod_result = this.operaciones.cifrar(this.textField.toLowerCase(), 3);
+    this.decod_result = '';
   }
+
+  decodificar() {
+    this.decod_result = this.operaciones.descifrar(this.cod_result, 3);
+    this.cod_result = '';
+  }
+
 
   clearWord() {
-    this.dividedWord = [];
+    console.log('hola estoy entrando')
     this.textField = '';
-    this.joinedWord = '';
-  }
+    this.cod_result = '';
+    this.decod_result = '';
 
-  joinWord() {
-    this.joinedWord = this.dividedWord.toString();
-    this.joinedWord = this.joinedWord.replace(/,/g, "");
-    this.dividedWord = [];
   }
 
 }
