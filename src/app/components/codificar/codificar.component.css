@@ -28,8 +28,24 @@ h4 {
   text-align:start;
 }
 
-/* bloques para escribir texto */
+.dropdown{
+  display: flex;
+}
 
+.spandrop{
+  display: flex;
+  text-align: start;
+  margin-left: 15%;
+}
+/* bloques para escribir texto */
+select {
+  display: flex;
+  width: 5%;
+  place-content: center;
+  /* align-items: center; */
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
 textarea {
   height: 200px!important;
   width: 70%;
@@ -60,7 +76,9 @@ textarea {
 
 /* botones de codificar y decodificar */
 /* codificar */
-
+.btn-group {
+  margin-bottom: 10px;
+}
 
 
 button {
@@ -69,6 +87,7 @@ button {
 }
 
 .inactive--sky {
+  margin-bottom: 15px;
   display: inline-block;
   outline: none;
   overflow: hidden;

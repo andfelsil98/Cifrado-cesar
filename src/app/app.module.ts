@@ -8,6 +8,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { CodificarComponent } from './components/codificar/codificar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

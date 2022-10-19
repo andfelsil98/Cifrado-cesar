@@ -13,10 +13,21 @@
 
   </div>
 
+<!--
+  <div class="dropdown"> -->
+  <p class="dropdown">
+    <span class="spandrop">Valor de la llave: </span>
+    <select class="form-select" [(ngModel)] = "dropField" aria-label="Default select example">
+      <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+    </select>
+  </p>
+
+
   <p>
+
     <!-- <a  href="" class="css-button-arrow--sky">Codificar</a>
   <a routerLink="/decodificar" class="css-button-arrow--black">Decodificar</a> -->
-  <button [disabled]="!textField" class="inactive--sky " [class.css-button-arrow--sky]= 'textField' (click)="codificar()">Codificar</button>
+  <button [disabled]="!textField && dropField === 0" class="inactive--sky " [class.css-button-arrow--sky]= 'textField && dropField > 0' (click)="codificar()">Codificar</button>
   <button [disabled]="!cod_result" class="inactive--black" [class.css-button-arrow--black]= 'cod_result' (click)="decodificar()">Decodificar</button>
   </p>
   <!-- <p class="action-btn">
